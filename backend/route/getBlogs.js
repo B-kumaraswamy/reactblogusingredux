@@ -22,7 +22,7 @@ getBlogsRouter.get('/:blogid', async(req, res) => {
      const {blogid} = req.params
     
      console.log('request in the full blog', req)
-    const displayBlog =  await blogList.findOne({id : blogid})
+    const displayBlog =  await blogList.findOne({_id : blogid})
  
      return res.status(200).json({status : 200, result : displayBlog})
     }
